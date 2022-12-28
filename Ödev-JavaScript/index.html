@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      /*
+		   	Yazılıma rastgele bir sayı tutturun .
+			Prompt özelliği ile kullanıcının 3 hakta bu sayıyı 
+			bulmasını sağlayın.Eğer 3 hak sonucunda sayıyı bulamazsa ekrana;
+			Bilemediniz.Benim belirlerdiğim sayı  şu. --yazsı
+		*/
+
+      function game() {
+        let sayi;
+        sayi = Math.floor(Math.random() * 10);
+        for (let i = 0; i < 3; i++) {
+          let girilenSayi = prompt(
+            i + 1 + ". Hakkınız 0 ile 10 arasında bi sayı giriniz."
+          );
+          if (sayi == girilenSayi) {
+            return document.write(
+              "Tebrikler,bildiniz.Bilgisayarın tahmini :" +
+                sayi +
+                " Sizin tahmininiz :" +
+                girilenSayi
+            );
+          } else if (i == 2 && sayi != girilenSayi) {
+            return document.write(
+              "Bilemediniz, hakkınız doldu.Bilgisayarın tahmini:" + sayi
+            );
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      game();
+    </script>
+  </body>
+</html>
